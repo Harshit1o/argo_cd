@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-demo
+  template:
+    metadata:
+      labels:
+        app: django-demo
+    spec:
+      containers:
+        - name: django-demo
+          image: codernocap/django-demo:latest
+          ports:
+            - containerPort: 8000
+
