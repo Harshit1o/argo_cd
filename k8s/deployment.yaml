@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: django-demo
-          image: codernocap/django-demo:latest
+          image: codernocap/django-demo:v2
           ports:
             - containerPort: 8000
 
